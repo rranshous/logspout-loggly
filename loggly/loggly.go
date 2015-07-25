@@ -72,6 +72,7 @@ func (l *Adapter) Stream(logstream chan *router.Message) {
 		err := l.SendMessage(msg)
 
 		if err != nil {
+			fmt.Println("err:", err.Error())
 			log.Println(err.Error())
 		}
 	}
