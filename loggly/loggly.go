@@ -24,6 +24,8 @@ const (
 func init() {
 	router.AdapterFactories.Register(NewLogglyAdapter, adapterName)
 
+	fmt.Println("STARTING")
+
 	r := &router.Route{
 		Adapter: "loggly",
 	}
